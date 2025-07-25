@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   MediVibe - AI Chat Assistant
+  </title>
+  <link href="interface.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <aside>
+   <h2>
+    🩺 MediVibe
+   </h2>
+   <div class="history" id="history">
+   </div>
+   <button class="new-chat" onclick="newChat()">
+    + New Chat
+   </button>
+  </aside>
+  <main>
+   <header>
+    MediVibe AI Chat
+   </header>
+   <div class="chat-box" id="chatBox">
+    <div class="message assistant">
+     <div class="bubble">
+      Hello! I'm MediVibe. How can I assist you today? 🎧
+     </div>
+    </div>
+   </div>
+   <div class="input-area">
+    <input id="userInput" placeholder="Type your message..." type="text"/>
+    <button onclick="sendMessage()">
+     Send
+    </button>
+    <button onclick="startVoice()">
+     🎤
+    </button>
+   </div>
+   <footer>
+    © 2025 MediVibe. Built for Vibe-A-Thon 💙
+   </footer>
+  </main>
+  <script src="interface.js">
+  </script>
+ </body>
+</html>

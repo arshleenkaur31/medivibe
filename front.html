@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   MediVibe - Login / Sign Up
+  </title>
+  <link href="front.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <div class="card">
+   <img alt="MediVibe Logo" class="logo" src="https://img.icons8.com/fluency/96/stethoscope.png"/>
+   <div id="loginForm">
+    <h2>
+     MediVibe Login
+    </h2>
+    <input id="loginUsername" placeholder="Username" type="text"/>
+    <input id="loginPassword" placeholder="Password" type="password"/>
+    <button onclick="handleLogin()">
+     Login
+    </button>
+    <a class="forgot-link" href="#" onclick="handleForgotPassword()">
+     Forgot Password?
+    </a>
+    <div class="switch-link" onclick="showSignup()">
+     Don't have an account? Sign Up
+    </div>
+   </div>
+   <div class="hidden" id="signupForm">
+    <h2>
+     🩺 MediVibe Sign Up
+    </h2>
+    <input id="signupUsername" placeholder="Username" type="text"/>
+    <input id="signupEmail" placeholder="Email" type="email"/>
+    <input id="signupPassword" placeholder="Password" type="password"/>
+    <button onclick="handleSignup()">
+     Sign Up
+    </button>
+    <div class="switch-link" onclick="showLogin()">
+     Already have an account? Login
+    </div>
+   </div>
+   <div class="footer-note">
+    © 2025 MediVibe
+   </div>
+  </div>
+  <script src="front.js">
+  </script>
+ </body>
+</html>

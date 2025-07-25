@@ -1,0 +1,188 @@
+
+    :root {
+      --primary: #00BFFF;
+      --secondary: #8A2BE2;
+      --bg-dark: #0a0f2c;
+      --bg-light: #1b1f3c;
+      --text: #ddd;
+      --card-bg: rgba(255, 255, 255, 0.05);
+      --accent-gradient: linear-gradient(135deg, #00BFFF, #8A2BE2);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-light) 100%);
+      color: var(--text);
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    aside {
+      width: 250px;
+      background-color: rgba(10, 15, 44, 0.95);
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+      border-right: 1px solid rgba(0,191,255,0.3);
+      overflow-y: auto;
+    }
+
+    aside h2 {
+      margin: 0 0 1rem;
+      font-size: 1.4rem;
+      background: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-align: center;
+    }
+
+    .history {
+      flex: 1;
+      overflow-y: auto;
+    }
+
+    .history-item {
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      margin-bottom: 0.5rem;
+      background-color: var(--card-bg);
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .history-item:hover {
+      background-color: rgba(0,191,255,0.15);
+    }
+
+    .new-chat {
+      background: transparent;
+      color: #00BFFF;
+      border: 2px solid #00BFFF;
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: all 0.3s;
+      margin-top: 1rem;
+    }
+
+    .new-chat:hover {
+      background: #00BFFF;
+      color: white;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+      overflow: hidden;
+    }
+
+    header {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      background-image: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .chat-box {
+      flex: 1;
+      background-color: var(--card-bg);
+      border-radius: 1rem;
+      padding: 1rem;
+      overflow-y: auto;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 30px rgba(0,191,255,0.2);
+      border: 1px solid rgba(0,191,255,0.3);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .message {
+      display: flex;
+      margin: 0.5rem 0;
+      animation: fadeIn 0.5s ease;
+    }
+
+    .message .bubble {
+      padding: 0.8rem 1rem;
+      border-radius: 1rem;
+      max-width: 80%;
+      word-wrap: break-word;
+    }
+
+    .message.user {
+      justify-content: flex-end;
+    }
+
+    .message.user .bubble {
+      background: var(--accent-gradient);
+      color: white;
+      border-bottom-right-radius: 0;
+    }
+
+    .message.assistant {
+      justify-content: flex-start;
+    }
+
+    .message.assistant .bubble {
+      background-color: rgba(255,255,255,0.08);
+      border: 1px solid rgba(0,191,255,0.4);
+      backdrop-filter: blur(8px);
+      border-bottom-left-radius: 0;
+    }
+
+    .input-area {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .input-area input {
+      flex: 1;
+      padding: 0.8rem 1rem;
+      border-radius: 0.5rem;
+      background-color: rgba(255,255,255,0.08);
+      color: #ddd;
+      border: 1px solid rgba(0,191,255,0.3);
+      backdrop-filter: blur(6px);
+    }
+
+    .input-area button {
+      background: transparent;
+      color: #00BFFF;
+      border: 2px solid #00BFFF;
+      padding: 0.8rem 1rem;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: all 0.3s;
+      box-shadow: 0 0 10px #00BFFF;
+    }
+
+    .input-area button:hover {
+      background: #00BFFF;
+      color: white;
+      box-shadow: 0 0 20px #00BFFF;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #888;
+      padding: 0.5rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  

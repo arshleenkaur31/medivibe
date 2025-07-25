@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   MediVibe - Your AI Healthcare Assistant
+  </title>
+  <link href="index.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <header>
+   <h1>
+    🩺 MediVibe
+   </h1>
+   <nav class="nav-links">
+    <a href="#about">
+     About
+    </a>
+    <a href="#features">
+     Features
+    </a>
+    <a href="#try">
+     Try
+    </a>
+    <div class="profile-container">
+     <button aria-label="Profile" id="profileButton">
+      <img alt="Profile" class="profile-avatar" src="https://img.icons8.com/fluency/48/user-male-circle.png"/>
+     </button>
+     <div class="profile-dropdown" id="profileDropdown">
+      <a href="#appointments">
+       Appointments
+      </a>
+      <a href="#dashboard">
+       Dashboard
+      </a>
+      <a href="#reports">
+       Reports
+      </a>
+      <a href="#settings">
+       Settings
+      </a>
+      <a href="#" onclick="logout()">
+       Logout
+      </a>
+     </div>
+    </div>
+   </nav>
+  </header>
+  <div class="hero">
+   <div class="hero-content">
+    <h2>
+     Your AI-Powered Healthcare Companion
+    </h2>
+    <p>
+     Speak naturally. Book appointments. Get health advice instantly. Accessible care with your voice.
+    </p>
+    <a href="#" onclick="goToAssistant()">
+     <button>
+      Try the Voice Assistant
+     </button>
+    </a>
+    <a href="front.html">
+     <button>
+      Login
+     </button>
+    </a>
+   </div>
+  </div>
+  <section id="about">
+   <div class="about">
+    <img alt="Doctor and patient" src="https://services.brieflands.com/cdn/serve/316a3/23036b74d4c390209c0a039803bdeee601fcbb7d/Artificial%20Intelligence%20in%20Medicine%20The%20Future%20of%20Healthcare.jpeg"/>
+    <div class="about-text">
+     <h3>
+      About MediVibe
+     </h3>
+     <p>
+      MediVibe is an AI-powered voice assistant designed to make healthcare more human. Our mission is to simplify access to care by enabling patients to speak naturally to book appointments, get medication reminders, or receive instant symptom triage guidance. No waiting. No complicated forms. Just say it, and MediVibe understands.
+     </p>
+    </div>
+   </div>
+  </section>
+  <section class="features" id="features">
+   <h3>
+    Features
+   </h3>
+   <div class="feature-grid">
+    <div class="feature-card">
+     <img alt="Appointment" src="https://img.icons8.com/ios-filled/100/4CAF50/calendar--v1.png"/>
+     <h4>
+      Appointment Booking
+     </h4>
+     <p>
+      Say it once. Get booked with your doctor instantly without any hassle.
+     </p>
+    </div>
+    <div class="feature-card">
+     <img alt="Medication" src="https://img.icons8.com/ios-filled/100/4CAF50/pill.png"/>
+     <h4>
+      Medication Reminders
+     </h4>
+     <p>
+      Never forget your medicines. Set reminders just by speaking.
+     </p>
+    </div>
+    <div class="feature-card">
+     <img alt="Triage" src="https://img.icons8.com/ios-filled/100/4CAF50/heart-health.png"/>
+     <h4>
+      Symptom Triage
+     </h4>
+     <p>
+      Describe your symptoms. Get safe, instant guidance for next steps.
+     </p>
+    </div>
+   </div>
+  </section>
+  <section class="steps" id="how-to-use">
+   <h3>
+    How to Use MediVibe
+   </h3>
+   <div class="steps-grid">
+    <div class="step-card">
+     <span class="step-number">
+      1
+     </span>
+     <h4>
+      Sign Up / Login
+     </h4>
+     <p>
+      Create your secure account to get started with MediVibe. Access your health info anytime.
+     </p>
+    </div>
+    <div class="step-card">
+     <span class="step-number">
+      2
+     </span>
+     <h4>
+      Choose Your Service
+     </h4>
+     <p>
+      Select voice assistant, appointment booking, medication reminders, or triage support.
+     </p>
+    </div>
+    <div class="step-card">
+     <span class="step-number">
+      3
+     </span>
+     <h4>
+      Speak or Type Naturally
+     </h4>
+     <p>
+      Talk or type your needs. MediVibe understands your requests easily, even abbreviations!
+     </p>
+    </div>
+    <div class="step-card">
+     <span class="step-number">
+      4
+     </span>
+     <h4>
+      Get Instant Help
+     </h4>
+     <p>
+      Receive confirmations, reminders, or urgent symptom guidance right away, 24/7.
+     </p>
+    </div>
+   </div>
+  </section>
+  <section class="appointments" id="appointments">
+   <h3>
+    🩺 Book an Appointment
+   </h3>
+   <div class="appointments-form">
+    <div class="form-card">
+     <label for="date">
+      Select a Date:
+     </label>
+     <input id="appointmentDate" type="date"/>
+     <label for="doctor">
+      Select a Doctor:
+     </label>
+     <select id="doctor">
+      <option value="">
+       -- Choose Doctor --
+      </option>
+      <option value="Dr. Priya Sharma (Cardiologist)">
+       Dr. Priya Sharma (Cardiologist)
+      </option>
+      <option value="Dr. Rahul Verma (General Physician)">
+       Dr. Rahul Verma (General Physician)
+      </option>
+      <option value="Dr. Meera Iyer (Dermatologist)">
+       Dr. Meera Iyer (Dermatologist)
+      </option>
+      <option value="Dr. Anil Kapoor (Orthopedic Surgeon)">
+       Dr. Anil Kapoor (Orthopedic Surgeon)
+      </option>
+      <option value="Dr. Sara Khan (Pediatrician)">
+       Dr. Sara Khan (Pediatrician)
+      </option>
+      <option value="Dr. Amit Joshi (Neurologist)">
+       Dr. Amit Joshi (Neurologist)
+      </option>
+      <option value="Dr. Kavita Desai (Gynecologist)">
+       Dr. Kavita Desai (Gynecologist)
+      </option>
+     </select>
+     <button onclick="bookAppointment()">
+      Book Appointment
+     </button>
+    </div>
+   </div>
+   <div class="confirmation" id="confirmation">
+   </div>
+  </section>
+  <section class="cta" id="try">
+   <h3>
+    Ready to Try MediVibe?
+   </h3>
+   <p>
+    Experience voice-powered healthcare today.
+   </p>
+   <a href="interface.html">
+    <button>
+     Try the Voice Assistant
+    </button>
+   </a>
+  </section>
+  <footer>
+   © 2025 MediVibe. Built for Vibe-A-Thon.
+  </footer>
+  <script src="index.js">
+  </script>
+ </body>
+</html>
